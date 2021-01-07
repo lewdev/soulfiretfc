@@ -1,0 +1,23 @@
+{
+  "title": "SoulFire Tenrikyo Faith Convention",
+  "url": "https://tenrikyo.com/tfc",
+  "description": "Igniting our faith through motivation and empowerment.",
+  "instagram": "https://www.instagram.com/tenrikyo.faith.conference/",
+  "facebook": "https://www.facebook.com/soulfiretfc/",
+  "email": "soulfiretfc@gmail.com",
+  "feed": {
+    "subtitle": "Igniting our faith through motivation and empowerment.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://example.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://example.com/feed/feed.json"
+  },
+  "author": {
+    "name": "SoulFire Tenrikyo Faith Convention",
+    "email": "soulfiretfc@gmail.com",
+    "url": "https://www.facebook.com/soulfiretfc/"
+  }
+}

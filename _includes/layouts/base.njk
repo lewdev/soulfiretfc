@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<!--
+Hyperspace by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>{{ metadata.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url}}" />
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | url}}" /></noscript>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icon/apple-touch-icon.png' | url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icon/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icon/favicon-16x16.png' | url }}">
+  <link rel="manifest" href="{{ '/assets/icon/site.webmanifest' | url }}">
+  <link rel="mask-icon" href="{{ '/assets/icon/safari-pinned-tab.svg' | url }}" color="#f0562c">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body class="is-preload">
+
+  {{ content | safe }}
+
+  {% include 'footer.njk' %}
+
+</body>
+</html>

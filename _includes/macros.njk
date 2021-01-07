@@ -1,0 +1,17 @@
+{% macro sectionImage(title, imgUrl, description, learMoreUrl) %}
+<section>
+{{ learnMoreUrl }}
+  <a href="{{ learnMoreUrl | url }}" class="section-bg-image style3 fade-up" style="background-image: url({{ imgUrl | url }});">
+    <img src="{{ imgUrl | url }}" class="section-bg-image" style="margin-bottom:-1.5rem" alt="" data-position="top center" />
+  </a>
+  <div class="content">
+    <div class="inner">
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+      <ul class="actions">
+        <li><a href="{{ learnMoreUrl | url }}" class="button">Learn more</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endmacro %}

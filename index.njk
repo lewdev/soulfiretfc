@@ -1,0 +1,177 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+key: Home
+order: 1
+---
+{% macro sectionImage(title, imgUrl, description, learMore) %}
+<section>
+  <a href="{{ learMore | url }}" class="section-bg-image style3 fade-up" style="background-image: url({{ imgUrl | url }});">
+    <img src="{{ imgUrl | url }}" class="section-bg-image" style="margin-bottom:-1.5rem" alt="" data-position="top center" />
+  </a>
+  <div class="content">
+    <div class="inner">
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+      <ul class="actions">
+        <li><a href="{{ learMore | url }}" class="button">Learn more</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+<!-- Sidebar -->
+<section id="sidebar">
+  <div class="inner">
+    <nav>
+      <ul>
+        <li><a href="#intro">Welcome</a></li>
+        <li><a href="#what">What is this</a></li>
+        <li><a href="#two">What we do</a></li>
+        <li><a href="#three">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Intro -->
+  <section id="intro" class="bg-fire wrapper style1 fullscreen fade-up">
+    <div class="inner text-center">
+      <div><img src="{{ '/assets/img/logo.png' | url }}" class="center"/></div>
+      <h1>SoulFire<br/>Tenrikyo Faith Convention</h1>
+      <p>{{ metadata.description }}</p>
+      <ul class="actions">
+        <li class="mlr-auto"><a href="#what" class="button scrolly">Learn more</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="what" class="wrapper style2 spotlights">
+    {{sectionImage(
+      title="Virtual Conference",
+      imgUrl="/assets/img/frank-mckenna-OD9EOzfSOh0-unsplash.jpg",
+      description="Due to the pandemic, the conference will be held virtually. An in-person conference is also planned for 2020.",
+      learMore='/virtual'
+    )}}
+    {{sectionImage(
+      title="Virtual Conference",
+      imgUrl="/assets/img/jae-bano-Xbf_4e7YDII-unsplash.jpg",
+      description="Due to the pandemic, the conference will be held virtually. An in-person conference is also planned for 2020.",
+      learMore="/virtual/index.html"
+    )}}
+    {{sectionImage(
+      title="Virtual Conference",
+      imgUrl="/assets/img/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg",
+      description="Due to the pandemic, the conference will be held virtually. An in-person conference is also planned for 2020.",
+      learMore=""
+    )}}
+    {{sectionImage(
+      title="Virtual Conference",
+      imgUrl="/assets/img/sasha-freemind-nXo2ZsKHTHg-unsplash.jpg",
+      description="Due to the pandemic, the conference will be held virtually. An in-person conference is also planned for 2020.",
+      learMore=""
+    )}}
+  </section>
+
+  <!-- Two -->
+  <section id="two" class="wrapper style3 fade-up">
+    <div class="inner">
+      <h2>What we do</h2>
+      <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+      <div class="features">
+        <section>
+          <span class="icon solid major fa-code"></span>
+          <h3>Lorem ipsum amet</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-lock"></span>
+          <h3>Aliquam sed nullam</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-cog"></span>
+          <h3>Sed erat ullam corper</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-desktop"></span>
+          <h3>Veroeros quis lorem</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-link"></span>
+          <h3>Urna quis bibendum</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+        <section>
+          <span class="icon major fa-gem"></span>
+          <h3>Aliquam urna dapibus</h3>
+          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+        </section>
+      </div>
+      <ul class="actions">
+        <li><a href="{{ 'generic.html' | url }}" class="button">Learn more</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Three -->
+  <section id="three" class="wrapper style1 fade-up">
+    <div class="inner">
+      <h2>Get in touch</h2>
+      <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+      <div class="split style1">
+        <section>
+          <ul class="contact">
+            {# <li>
+              <h3>Address</h3>
+              <span>12345 Somewhere Road #654<br />
+                Nashville, TN 00000-0000<br />
+                USA</span>
+            </li> #}
+            <li>
+              <h3>Email</h3>
+              <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+            </li>
+            <li>
+              <h3>Social</h3>
+              <ul class="icons">
+                {% if metadata.twitter %}<li><a href="{{ metadata.twitter | url}}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>{% endif %}
+                {% if metadata.facebook %}<li><a href="{{ metadata.facebook | url}}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>{% endif %}
+                {% if metadata.github %}<li><a href="{{ metadata.github | url}}" class="icon brands fa-github"><span class="label">Github</span></a></li>{% endif %}
+                {% if metadata.instagram %}<li><a href="{{ metadata.instagram | url}}" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>{% endif %}
+                {% if metadata.linkedin %}<li><a href="{{ metadata.linkedin | url}}" class="icon brands fa-linkedin-in"><span class="label">Linked In</span></a></li>{% endif %}
+              </ul>
+            </li>
+          </ul>
+        </section>
+        {# <section>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><a href="" class="button submit">Send Message</a></li>
+            </ul>
+          </form>
+        </section> #}
+      </div>
+    </div>
+  </section>
+</div>

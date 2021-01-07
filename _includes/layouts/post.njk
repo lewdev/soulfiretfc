@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>{{ metadata.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url}}" />
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | url}}" /></noscript>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icon/apple-touch-icon.png' | url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icon/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icon/favicon-16x16.png' | url }}">
+  <link rel="manifest" href="{{ '/assets/icon/site.webmanifest' | url }}">
+  <link rel="mask-icon" href="{{ '/assets/icon/safari-pinned-tab.svg' | url }}" color="#f0562c">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:site_name" content="{{ metadata.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="{{ metadata.title }}" />
+  <meta property="og:image" content="/assets/img/banner.png" />
+  <meta property="og:description" content="{{ metadata.description }}" />
+  <meta property="og:url" content="http://tenrikyo.com/tfc" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="{{'/assets/icons/favicon.ico' | url}}" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" href="{{'/assets/icons/apple-touch-icon-precomposed.png' | url}}" />
+</head>
+<body>
+
+  <!-- Header -->
+    <header id="header">
+      <a href="/" class="title">
+        <img src="{{ '/assets/icon/apple-touch-icon.png' | url }}" style="width: 1.5rem;"/> {{ metadata.title }}
+      </a>
+      <nav>
+        <ul>
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li><a class="{% if entry.url == page.url %}active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <div id="wrapper">
+      <section id="main" class="wrapper">
+        <div class="inner">
+          <h1 class="major">{{ title }}</h1>
+          {{ content | safe }}
+        </div>
+      </section>
+    </div>
+
+  {% include 'footer.njk' %}
+</body>
+</html>
