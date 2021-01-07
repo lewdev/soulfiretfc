@@ -1,10 +1,10 @@
 ---
+title: About
 layout: layouts/post.njk
-title: About Me
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
 
-I am a person that writes stuff.
+This is a Tenrikyo event.

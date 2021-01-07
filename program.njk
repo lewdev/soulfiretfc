@@ -1,14 +1,11 @@
 ---
-layout: layouts/home.njk
+title: Program
+layout: layouts/post.njk
 permalink: /program/
 eleventyNavigation:
-  key: Archive
+  key: Program
   order: 2
 ---
-<h1>Archive</h1>
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
-
-{% set projectslist = collections.projects %}
-{% include "projectslist.njk" %}
